@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Stopwatch</h2>
+
+<h1 id="time">0</h1>
+
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+
+<script>
+let t = 0;
+let interval;
+
+function start(){
+    interval = setInterval(() => {
+        t++;
+        document.getElementById("time").innerHTML = t;
+    }, 1000);
+}
+
+function stop(){
+    clearInterval(interval);
+}
+</script>
+
+</body>
+</html>
